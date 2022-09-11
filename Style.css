@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+}
+body{
+    min-height: 100vh;
+    background-image: url(images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(257, 40%, 49%);
+    margin: 0 10% 0 10%;
+}
+.attribution { font-size: 11px; text-align: center;}
+.attribution a { color: white; }
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    margin: 0 2rem;
+}
+.logo img{
+    width: 190px;
+    padding-bottom: 20px;
+}
+.main{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.huddle-des h1{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+}
+.huddle-des p{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    margin-bottom: 60px;
+    line-height: 1.8;
+}
+.huddle-des a{
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(257, 40%, 49%);
+    font-weight: 800;
+    text-decoration: none;
+    background-color: white;
+    padding: 13px 50px;
+    border-radius: 30px;
+    box-shadow: 0 8px 17px -8px black;
+
+}
+.huddle-des a:hover {
+    color: white;
+    background-color: hsl(300, 69%, 71%);
+}
+.social-icons{
+    text-align: right;
+}
+.social-icons a i{
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+}
+.social-icons a:not(:first-child){
+    margin-left: 2rem
+}
+.social-icons a i::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    left: -13px;
+    bottom: -11px;
+}
+.social-icons a:nth-child(2){
+    margin-left: 2.3rem;
+}
+.social-icons a:hover i{ 
+    color: hsl(300, 69%, 71%);
+}
+.social-icons a i:hover::after{
+    border-color: hsl(300, 69%, 71%);
+}
+
+@media only screen and (max-width: 1440px) {
+    .huddle-img img{ width: 100%;}
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        background-image: url(images/bg-mobile.svg);
+    }
+    .main{
+        flex-direction: column;
+        text-align: center;
+    }
+    .huddle-img img{
+        width: 90%;
+    }
+    .huddle-des h1{
+        font-size: 26px;
+    }
+    .social-icons{
+        text-align: center;
+        margin-top: 40px;
+    }
+    .huddle-des a{
+        padding: 10px 70px;
+    }
+}
